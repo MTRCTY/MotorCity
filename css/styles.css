@@ -80,11 +80,29 @@
   }
 }
 
+@font-face {
+  font-family: 'SanMarino';
+  src:  url('../assets/font/San\ Marino.ttf');
+        
+}
+
+@font-face {
+  font-family: 'GelionReg';
+  src:  url('../assets/font/Gelion-Regular.ttf');
+        
+}
+
+@font-face {
+  font-family: 'GelionBold';
+  src:  url('../assets/font/Gelion-Bold.ttf');
+        
+}
+
 body {
   margin: 0;
-  font-family: var(--bs-body-font-family);
+  font-family: 'GelionReg' !important;
   font-size: var(--bs-body-font-size);
-  font-weight: var(--bs-body-font-weight);
+
   line-height: var(--bs-body-line-height);
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
@@ -605,9 +623,18 @@ progress {
 .img-fluid {
   max-width: 100%;
   height: auto;
-  padding-bottom:5rem;
+  
 }
 
+
+.bg-image{
+  
+}
+
+.rocket{
+  mix-blend-mode: lighten;
+
+}
 
 .tag {
   opacity: 0;
@@ -622,6 +649,61 @@ progress {
   transform: none;
   visibility: visible;
 }
+
+
+.head-font{
+  font-family: 'SanMarino' !important;
+  font-size: 8rem !important;
+}
+
+.load-fade{
+  opacity: 0;
+    transition: opacity 2s;
+    -webkit-transition: opacity 2s; /* Safari */
+}
+
+.fade-left{
+  opacity: 0;
+  transform: translateX(40vw);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.8s ease-out;
+  
+}
+
+.fade-left.visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+.fade-right{
+  opacity: 0;
+  transform: translateX(-40vw);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.8s ease-out;
+}
+
+.fade-right.visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+
+
+.fade-scale{
+  opacity: 0;
+  transform:scale(0.3);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 0.8s ease-out;
+}
+
+.fade-scale.visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
 
 
 
@@ -11582,7 +11664,8 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-masthead.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/skyline1.jpg");
+  
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11634,6 +11717,7 @@ body {
 
 .projects-section {
   padding: 10rem 0;
+  overflow-x: hidden;
 }
 .projects-section .featured-text {
   padding: 2rem;
