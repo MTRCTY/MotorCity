@@ -622,7 +622,7 @@ progress {
 
 .img-fluid {
   max-width: 100%;
-  height: auto;
+  height: 100%;
   
 }
 
@@ -11686,10 +11686,14 @@ body {
   max-width: 20rem;
   font-size: 1rem;
 }
-@media (max-width: 450px) {
-  .masthead h1, .masthead .h1 {
-    font-size: 4rem !important;
-    
+@media (max-width: 565px) {
+  .masthead h1{
+    font-size: 5.5rem !important;
+    letter-spacing: 25px !important;
+    padding-left: 20px !important;
+  }
+  .thingy{
+    padding-bottom: 150px !important;
   }
 }
 @media (min-width: 992px) {
